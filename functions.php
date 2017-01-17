@@ -37,3 +37,7 @@ function externalScripts() {
   wp_enqueue_style('leafletCSS','https://unpkg.com/leaflet@1.0.2/dist/leaflet.css');
   wp_enqueue_style('animation','https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
 }
+
+remove_filter( 'the_content', 'wp_bootstrap_first_paragraph' ); //remove lead paragraph special styling function from parent 
+
+add_image_size( 'dh-featured', 800, 800, true ); //new thumbnail size

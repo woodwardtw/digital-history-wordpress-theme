@@ -1,7 +1,7 @@
 /*
  Theme Name:   Digital History
  Theme URI:    http://
- Description:  WP-Bootstrap Child Theme for something or another
+ Description:  WP-Bootstrap Child Theme for Digital History
  Author:       Tom Woodward
  Author URI:   http://bionicteaching.com
  Template:     wp-bootstrap
@@ -12,24 +12,38 @@
  Text Domain:  boot-boot-boot
 */
 
-@import url('https://fonts.googleapis.com/css?family=Antic|Sanchez|Unica+One');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
+body {
+    background-color: #424242;
+}
 
 a {
     color: #424242;    
+}
+
+header {
+     background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;    
 }
 
 #main {
     background-color: #fff;
 }
 
+#content {
+    padding: 100px 0 0 0;
+}
+
 #sidebar1 {
     background-color: #fff;
     margin-top: 0px !important;
     padding-top: 20px;
+    min-height: 700px;
 }
 
-.h2 a {
+.single-title a, .single-title, .page-title, .title-link a, h1.page-title, h1.page-header {
     color: #fff;
 	background-color:#cc0000;
     transition: color 0.5s ease;
@@ -37,13 +51,14 @@ a {
     -moz-transition: background-color 500ms ease-out 1s;
     -o-transition: background-color 500ms ease-out 1s;
     transition: background-color 500ms ease-out 1s;
-    padding: 5px;
-    font-family: 'Antic', sans-serif;
-    text-transform: uppercase;
-    font-weight: 800;
+    padding: 5px 12px !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    display: inline-block;
+    width: 60%;
 }
 
-.h2 a:hover {
+.single-title a:hover, .title-link a:hover {
 	color: #fff;
     text-decoration: none;
     background-color: #424242;
@@ -53,9 +68,8 @@ a {
     color: #fff;
     background-color:#cc0000;
     padding: 5px;
-    font-family: 'Antic', sans-serif;
-    text-transform: uppercase;
-    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 .response p, .response p a{
@@ -69,7 +83,7 @@ a {
     margin: 0px 0px 20px;
     border-bottom: 1px solid #424242;
     padding-left: 0px;
-    padding-top: 5px;
+    padding-top: 50px;
 }
 
 h1.page-title, h1.page-header{
@@ -114,6 +128,11 @@ h1.page-title, h1.page-header{
 	background-color: ##f8f8f8;
 }
 
+.lead {
+    font-size: 14px;
+    font-weight: normal;
+}
+
 #sidebar1 {
 	margin-top: 20px;
 }
@@ -130,34 +149,31 @@ h1.page-title, h1.page-header{
  	border-color: #f8f8f8;
  }
 
-/*
-category list plugin styling 
-*/
+#main {
+    padding: 0;
+} 
 
-.listing-item {
-	display: inline-block;
-    width: 100%;
-    border: 1px solid #BE3F21;
-    margin-bottom: 5px;
-    margin-top: 10px;
-    border-radius: 5px;
-    padding: 5px 5px 5px 10px;
+.post_content, #respond {
+    padding: 0 15px;
 }
 
-.listing-item .title {
-	text-decoration: none;
-	font-size: 1.4em;
-	font-weight: 500;
+.meta {
+    background-color: #fff;
+    padding: 12px;
 }
 
-.listing-item img {
-	display: inline-block;
-	float:left;
-	padding: 5px 10px 5px 5px;
+.cite {
+    font-size: .5;
+    color: #424242;
+    margin-top: 40px 20px 10px 20px;
+    background: #efefef;
+    padding: 10px;
+    display: inline-block;
 }
 
+/* map header background */
 #header-image {
-    height: 300px;
+    height: 600px;
     background-color: #cc0000;
     margin-top: -10px;
     position: fixed;
@@ -167,16 +183,29 @@ category list plugin styling
     display: none;
 }
 
-@media(max-width:767px){
-    .listing-item {
-    display: inline-block;
+
+/* feature image */
+.page-header {
     width: 100%;
-    border: 2px solid #BE3F21;
-    margin-bottom: 5px;
-    margin-top: 10px;
-    border-radius: 5px;
-    padding: 5px 5px 5px 10px;
+    padding-top: 600px;
 }
+
+
+
+@media(max-width:767px){
+    #header-image {
+        display: none;
+    }
+
+    header {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;    
+    }
+    .page-header {
+        margin-top: -130px; 
+        padding-top: 300px;           
+    }
 
 
 }
